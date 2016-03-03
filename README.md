@@ -1,2 +1,2 @@
-# endroid
+# Enduro on Phaser
 endroid phaser version

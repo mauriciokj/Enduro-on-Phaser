@@ -68,23 +68,13 @@ play.prototype = {
 
     if (cursors.left.isDown)
     {
-      movingTo = 'LEFT';
+      hero.body.velocity.x = -movingSpeed;
     }
     else if (cursors.right.isDown)
     {
-      movingTo = 'RIGHT';
-    }
-    else {
-      movingTo = 'STOPED';
-    }
-
-    if (movingTo == 'LEFT' ){
-      hero.body.velocity.x = -movingSpeed;
-    }
-    if ( movingTo == 'RIGHT' ){
       hero.body.velocity.x = movingSpeed;
     }
-    if ( movingTo == 'STOPED' ){
+    else {
       hero.body.velocity.x = 0;
     }
 

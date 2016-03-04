@@ -67,12 +67,18 @@ play.prototype = {
     this.moveTrack(track03);
 
     if (cursors.left.isDown)
-    {
-      hero.body.velocity.x = -movingSpeed;
+      { if (hero.x >= heroHeight) {
+        hero.body.velocity.x = -movingSpeed;
+      } else {
+        hero.body.velocity.x = 0 ;
+      }
     }
     else if (cursors.right.isDown)
-    {
-      hero.body.velocity.x = movingSpeed;
+      { if (hero.x <= game.width - heroHeight ){
+        hero.body.velocity.x = movingSpeed;
+      } else {
+        hero.body.velocity.x = 0 ;
+      }
     }
     else {
       hero.body.velocity.x = 0;
